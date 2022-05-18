@@ -1,3 +1,4 @@
+// Slideshow
 var slideIndex = 1,
     interval;
 

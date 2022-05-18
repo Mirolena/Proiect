@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width" , content="width=device-width" ,initial-scale="1.0">
     <title>WorldWide Meals</title>
-    <link rel="stylesheet" href="homepage.css">
-    <script src="homepage.js"></script>
+    <link rel="stylesheet" href="Proiect/homepage.css">
+    <script src="Proiect/homepage.js"></script>
 </head>
 
 
@@ -17,29 +17,27 @@
     <!-- SIDE Navigation -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="about.html">About</a>
-        <a href="login.html">Login</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About</a>
+        <a href="/login">Login</a>
+        <a href="/contact">Contact</a>
     </div>
 
     <div id="main">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <!-- SLIDE SHOW -->
         <div class="slideshow-container">
-
-
             <div class="image">
                 <h1>WorldWide Meals</h1>
                 <div class="mySlides fade">
-                    <img src="slide3.jpeg" style="width:100%">
+                    <img src="Proiect/slide3.jpeg" style="width:100%">
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="slide2.jpeg" style="width:100%">
+                    <img src="Proiect/slide2.jpeg" style="width:100%">
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="slide1.jpeg" style="width:100%">
+                    <img src="Proiect/slide1.jpeg" style="width:100%">
                 </div>
             </div>
 
@@ -50,35 +48,32 @@
         </div>
         <br>
 
-
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
 
-
-
-
         <br>
 
         <!-- NAV BAR -->
         <div class="navbar">
-            <a href="homepage.html"> Home</a>
+            <!-- modif class=active -->
+            <a href="/homepage"> Home</a>
 
             <div class="dropdown">
                 <button class="dropbtn">Breakfast</button>
                 <div class="dropdown-content">
-                    <a href="#">Asian</a>
-                    <a href="#">European</a>
-                    <a href="#">American</a>
+                    <a href="breakfast/asian.html">Asian</a>
+                    <a href="breakfast/european.html">European</a>
+                    <a href="breakfast/american.html">American</a>
                 </div>
             </div>
 
             <div class="dropdown">
                 <button class="dropbtn">Lunch</button>
                 <div class="dropdown-content">
-                    <a href="#">Asian</a>
+                    <a href="lunch/asian.html">Asian</a>
                     <a href="#">European</a>
                     <a href="#">American</a>
                 </div>
@@ -93,19 +88,18 @@
                 </div>
             </div>
 
-            <div class="dropdown">
-                <button class="dropbtn">Dessert</button>
-                <div class="dropdown-content">
-                    <a href="#">Asian</a>
-                    <a href="#">European</a>
-                    <a href="#">American</a>
-                </div>
-            </div>
 
-            <!-- SEARCH BAR -->
-            <input type="text" placeholder="Search...">
+            <!-- SEARCH BAR  -->
+            <div class="search-container">
+                <!-- DE MODIFICAT ACTION PAGE_UL -->
+                <form action="action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+            </div>
         </div>
 
         <br><br>
+
+
     </div>
 </body>

@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width" , content="width=device-width" ,initial-scale="1.0">
     <title>WorldWide Meals</title>
-    <link rel="stylesheet" href="homepage.css">
-    <script src="homepage.js"></script>
+    <link rel="stylesheet" href="Proiect/homepage.css">
+    <link rel="stylesheet" href="Proiect/login.css">
+    <script src="Proiect/homepage.js"></script>
+    <script src="Proiect/login.js"></script>
 </head>
 
 
@@ -17,29 +19,27 @@
     <!-- SIDE Navigation -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="about.html">About</a>
-        <a href="login.html">Login</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About</a>
+        <a href="/login">Login</a>
+        <a href="/contact">Contact</a>
     </div>
 
     <div id="main">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <!-- SLIDE SHOW -->
         <div class="slideshow-container">
-
-
             <div class="image">
                 <h1>WorldWide Meals</h1>
                 <div class="mySlides fade">
-                    <img src="slide3.jpeg" style="width:100%">
+                    <img src="Proiect/slide3.jpeg" style="width:100%">
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="slide2.jpeg" style="width:100%">
+                    <img src="Proiect/slide2.jpeg" style="width:100%">
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="slide1.jpeg" style="width:100%">
+                    <img src="Proiect/slide1.jpeg" style="width:100%">
                 </div>
             </div>
 
@@ -50,62 +50,117 @@
         </div>
         <br>
 
-
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
 
-
-
-
         <br>
 
         <!-- NAV BAR -->
         <div class="navbar">
-            <a href="homepage.html"> Home</a>
+            <!-- modif class=active -->
+            <a href="/homepage"> Home</a>
 
             <div class="dropdown">
                 <button class="dropbtn">Breakfast</button>
                 <div class="dropdown-content">
-                    <a href="#">Asian</a>
-                    <a href="#">European</a>
-                    <a href="#">American</a>
+                    <a href="breakfast/asian">Asian</a>
+                    <a href="breakfast/european">European</a>
+                    <a href="breakfast/american">American</a>
                 </div>
             </div>
 
             <div class="dropdown">
                 <button class="dropbtn">Lunch</button>
                 <div class="dropdown-content">
-                    <a href="#">Asian</a>
-                    <a href="#">European</a>
-                    <a href="#">American</a>
+                    <a href="lunch/asian">Asian</a>
+                    <a href="lunch/european">European</a>
+                    <a href="lunch/american">American</a>
                 </div>
             </div>
 
             <div class="dropdown">
                 <button class="dropbtn">Dinner</button>
                 <div class="dropdown-content">
-                    <a href="#">Asian</a>
-                    <a href="#">European</a>
-                    <a href="#">American</a>
+                    <a href="dinner/asian">Asian</a>
+                    <a href="dinner/european">European</a>
+                    <a href="dinner/american">American</a>
                 </div>
             </div>
 
-            <div class="dropdown">
-                <button class="dropbtn">Dessert</button>
-                <div class="dropdown-content">
-                    <a href="#">Asian</a>
-                    <a href="#">European</a>
-                    <a href="#">American</a>
-                </div>
+            <!-- SEARCH BAR  -->
+            <div class="search-container">
+                <!-- DE MODIFICAT ACTION PAGE_UL -->
+                <form action="action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
             </div>
-
-            <!-- SEARCH BAR -->
-            <input type="text" placeholder="Search...">
         </div>
 
         <br><br>
+       <!-- Formular de login -->
+       <button onclick="document.getElementById('id01').style.display='block'" style="width:30vw;float:left;margin-right: 5vw; margin-left: 10vw;">Login</button>
+
+       <div id="id01" class="modal">
+         
+         <form class="modal-content animate" action="Proiect/action_page.ejs" method="post">
+           <div class="imgcontainer">
+             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+           </div>
+       
+           <div class="container">
+             <label for="uname"><b>Username</b></label>
+             <input type="text" placeholder="Enter Username" name="uname" required>
+       
+             <label for="psw"><b>Password</b></label>
+             <input type="password" placeholder="Enter Password" name="psw" required>
+               
+             <button type="submit">Login</button>
+             <label>
+               <input type="checkbox" checked="checked" name="remember"> Remember me
+             </label>
+           </div>
+       
+           <div class="container" style="background-color:#f1f1f1">
+             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+             <span class="psw">Forgot <a href="#">password?</a></span>
+           </div>
+         </form>
+       </div>
+
+       <!-- formular de sign in -->
+       <button onclick="document.getElementById('id02').style.display='block'" style="width:30vw; float:right; margin-right: 10vw; margin-left: 5vw;">Sign in</button>
+
+       <div id="id02" class="modal">
+         
+         <form class="modal-content animate" action="Proiect/action_page.ejs" method="post">
+           <div class="imgcontainer">
+             <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+           </div>
+       
+           <div class="container">
+             <label for="uname"><b>Username</b></label>
+             <input type="text" placeholder="Enter Username" name="uname" required>
+       
+             <label for="psw"><b>Password</b></label>
+             <input type="password" placeholder="Enter Password" name="psw" required>
+
+             <label for="email"><b>E-mail</b></label>
+             <input type="email" placeholder="Enter E-mail" name="psw" required>
+               
+             <button type="submit">Sign in</button>
+             <label>
+               <input type="checkbox" checked="checked" name="remember"> Remember me
+             </label>
+           </div>
+       
+           <div class="container" style="background-color:#f1f1f1">
+             <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+             <span class="psw">Forgot <a href="action_page.ejs">password?</a></span>
+           </div>
+         </form>
+       </div>
     </div>
 </body>

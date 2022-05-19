@@ -19,7 +19,7 @@ app.get('/breakfast/asian', function (req, res) {
 app.get('/breakfast/european', function (req, res) {
     res.sendFile('european.html', { root: path.join(__dirname) });
 });
-app.get('/breakfast', function (req, res) {
+app.get('/breakfast/american', function (req, res) {
     res.sendFile('american.html', { root: path.join(__dirname) });
 });
 app.get('/lunch/asian', function (req, res) {
@@ -34,10 +34,10 @@ app.get('/lunch/american', function (req, res) {
 app.get('/dinner/asian', function (req, res) {
     res.sendFile('asian.html', { root: path.join(__dirname) });
 });
-app.get('/dinner/asian', function (req, res) {
+app.get('/dinner/european', function (req, res) {
     res.sendFile('european.html', { root: path.join(__dirname) });
 });
-app.get('/dinner/asian', function (req, res) {
+app.get('/dinner/american', function (req, res) {
     res.sendFile('american.html', { root: path.join(__dirname) });
 });
 app.use('/Proiect', express.static(path.join(__dirname)));

@@ -1,5 +1,0 @@
-
-        window.$mediavine = window.$mediavine || {};
-        window.$mediavine.web = window.$mediavine.web || {};
-        window.$mediavine.web.keywords = {"status":"PROCESSED","sales_kw":"best european desserts,sugar,chocolate,recipe,top,cookies,heavy cream,ingredients,strudel,minutes,vanilla extract,dessert,swiss pears,ice cream,list","sales_cat":"210,217,222,211,214","sales_safety":"GGT0"};
-      
